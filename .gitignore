@@ -1,0 +1,17 @@
+# Images taken from the reference site. The client asked for these to be
+# removed, so they must never be published. Kept locally only in case a file
+# needs to be recovered — delete the folder once you are sure.
+_removed-reference-images/
+
+# OS / editor noise
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+*~
+.vscode/
+.idea/
+
+# Local tooling
+node_modules/
+.vercel

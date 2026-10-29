@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darshan &amp; Dharal · Wedding Invitation</title>
+  <meta name="description" content="Together with their families, Darshan & Dharal request the pleasure of your company — Thursday, 24 December 2026, The Oberoi Udaivilas, Udaipur." />
+  <meta property="og:title" content="Darshan &amp; Dharal · Signature of Love" />
+  <meta property="og:description" content="Together with their families, Darshan & Dharal request the pleasure of your company." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#2a0610" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232a0610'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='15' fill='%23e3bd6b' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css?v=4" />
+</head>
+<body class="locked">
+  <script src="js/sprite.js?v=4"></script>
+
+  <!-- ============================================================
+       ENVELOPE / INTRO
+       ============================================================ -->
+  <div id="intro" class="intro" aria-label="Open invitation">
+    <div class="intro-glow" aria-hidden="true"></div>
+    <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Tap the seal to open the invitation">
+      <div class="env-back"></div>
+      <div class="env-letter">
+        <span class="letter-small">The wedding of</span>
+        <span class="letter-names">Darshan <em>&amp;</em> Dharal</span>
+        <span class="letter-rule" aria-hidden="true"></span>
+        <span class="letter-small">24 · 12 · 2026</span>
+      </div>
+      <div class="env-front"></div>
+      <div class="env-flap"></div>
+      <button class="seal" id="sealBtn" type="button" aria-label="Tap the seal to open">
+        <span class="seal-ring" aria-hidden="true"></span>
+        <span class="seal-inner">D<i>&amp;</i>D</span>
+      </button>
+    </div>
+    <div class="intro-text">
+      <p class="intro-dear">Dear <span class="guest-name">Guest</span>,</p>
+      <p class="intro-hint"><span class="diamond">◈</span> Tap the seal to open <span class="diamond">◈</span></p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FLOATING CONTROLS
+       ============================================================ -->
+  <canvas id="petals" aria-hidden="true"></canvas>
+  <button class="music-btn" id="musicBtn" type="button" aria-label="Toggle music">
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="music-label">Sound Off</span>
+  </button>
+  <audio id="bgm" src="assets/audio/kudmayi.mp3" loop preload="none"></audio>
+  <nav class="dots" id="dots" aria-label="Section navigation"></nav>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero" id="home" data-label="Home">
+      <div class="hero-art" aria-hidden="true">
+        <span class="hero-mandala"><svg><use href="#i-mandala" /></svg></span>
+        <span class="hero-paisley p1"><svg><use href="#i-paisley" /></svg></span>
+        <span class="hero-paisley p2"><svg><use href="#i-paisley" /></svg></span>
+      </div>
+      <div class="hero-frame" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow reveal">Together with their families</p>
+        <div class="monogram reveal">
+          <svg class="mono-ring" viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="92" />
+            <circle cx="100" cy="100" r="83" />
+          </svg>
+          <span>D<i>&amp;</i>D</span>
+        </div>
+        <h1 class="hero-names reveal">
+          <span>Darshan</span>
+          <span class="amp">&amp;</span>
+          <span>Dharal</span>
+        </h1>
+        <p class="hero-sub reveal">request the pleasure of your company</p>
+        <div class="hero-date reveal">
+          <span>Thursday</span>
+          <b>24 · December · 2026</b>
+          <span>6:00 PM</span>
+        </div>
+        <p class="hero-guest reveal">Dear <span class="guest-name">Guest</span>, your presence would mean the world to us</p>
+      </div>
+      <a href="#blessing" class="scroll-cue" aria-label="Scroll down">
+        <span class="scroll-word">Scroll</span>
+        <span class="scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ========================== BLESSING ========================== -->
+    <section class="blessing section-light" id="blessing" data-label="Blessing">
+      <div class="container narrow center">
+        <div class="blessing-medallion reveal">
+          <svg class="bm-lotus" aria-hidden="true"><use href="#i-lotus" /></svg>
+          <span class="bm-om" aria-hidden="true">ॐ</span>
+        </div>
+        <p class="sanskrit reveal">॥ श्री गणेशाय नमः ॥</p>
+        <div class="flourish reveal"><svg><use href="#i-flourish" /></svg></div>
+        <p class="blessing-text reveal">“With the divine blessings of our beloved elders, we invite you to share our joy.”</p>
+        <p class="blessing-quote reveal">Two souls, one heart — a promise written in the stars, sealed with a signature of love</p>
+      </div>
+    </section>
+
+    <!-- =========================== COUPLE =========================== -->
+    <section class="couple section-dark" id="couple" data-label="The Couple">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow">The Couple</p>
+          <h2>Two Souls, One Journey</h2>
+          <div class="flourish"><svg><use href="#i-flourish" /></svg></div>
+        </header>
+        <div class="couple-grid">
+          <article class="person reveal">
+            <!-- PHOTO SLOT · add inside .arch-inner: <img src="assets/images/groom.jpg" alt="Darshan Raval" /> -->
+            <div class="arch">
+              <div class="arch-inner">
+                <svg class="arch-mandala" aria-hidden="true"><use href="#i-mandala" /></svg>
+                <span class="arch-letter" aria-hidden="true">D</span>
+                <span class="arch-slot"><svg><use href="#i-photo" /></svg><b>Add photo</b></span>
+              </div>
+            </div>
+            <h3 class="script">Darshan</h3>
+            <p class="full">Darshan Raval</p>
+            <p class="parents"><span>Son of</span>Mr. Rajendra Raval &amp; Mrs. Rajal Raval</p>
+          </article>
+
+          <div class="couple-amp reveal"><span>&amp;</span></div>
+
+          <article class="person reveal">
+            <!-- PHOTO SLOT · add inside .arch-inner: <img src="assets/images/bride.jpg" alt="Dharal Surelia" /> -->
+            <div class="arch">
+              <div class="arch-inner">
+                <svg class="arch-mandala" aria-hidden="true"><use href="#i-mandala" /></svg>
+                <span class="arch-letter" aria-hidden="true">D</span>
+                <span class="arch-slot"><svg><use href="#i-photo" /></svg><b>Add photo</b></span>
+              </div>
+            </div>
+            <h3 class="script">Dharal</h3>
+            <p class="full">Dharal Surelia</p>
+            <p class="parents"><span>Daughter of</span>Mr. Himanshu Surelia &amp; Mrs. Darshana Surelia</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= CELEBRATIONS ======================= -->
+    <section class="events section-light" id="events" data-label="Celebrations">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow">The Celebrations</p>
+          <h2>Join Us in Our Joy</h2>
+          <div class="flourish"><svg><use href="#i-flourish" /></svg></div>
+          <p class="sec-sub events-sub">Four days of ritual, music and feasting — tap any ceremony for its full details.</p>
+        </header>
+
+        <div class="timeline">
+          <article class="event reveal">
+            <header class="event-head">
+              <span class="event-icon"><svg><use href="#i-haldi" /></svg></span>
+              <p class="event-no">Ceremony I</p>
+              <h3>Haldi Ceremony</h3>
+            </header>
+            <ul>
+              <li><b>Date</b>Tuesday, December 22, 2026</li>
+              <li><b>Time</b>10:00 AM</li>
+              <li><b>Venue</b>Poolside Terrace, The Oberoi Udaivilas</li>
+              <li><b>Dress</b>Shades of Yellow</li>
+            </ul>
+            <a class="btn btn-line" href="haldi.html">View Details</a>
+          </article>
+
+          <article class="event reveal">
+            <header class="event-head">
+              <span class="event-icon"><svg><use href="#i-mehendi" /></svg></span>
+              <p class="event-no">Ceremony II</p>
+              <h3>Mehendi &amp; Sangeet</h3>
+            </header>
+            <ul>
+              <li><b>Date</b>Wednesday, December 23, 2026</li>
+              <li><b>Time</b>4:00 PM Onwards</li>
+              <li><b>Venue</b>Courtyard Garden, The Oberoi Udaivilas</li>
+              <li><b>Dress</b>Festive Greens &amp; Pinks</li>
+            </ul>
+            <a class="btn btn-line" href="mehendi.html">View Details</a>
+          </article>
+
+          <article class="event featured reveal">
+            <span class="event-crown" aria-hidden="true">✦</span>
+            <header class="event-head">
+              <span class="event-icon"><svg><use href="#i-wedding" /></svg></span>
+              <p class="event-no">The Main Event</p>
+              <h3>Wedding</h3>
+            </header>
+            <ul>
+              <li><b>Date</b>Thursday, December 24, 2026</li>
+              <li><b>Time</b>6:00 PM</li>
+              <li><b>Venue</b>The Grand Mandap, The Oberoi Udaivilas</li>
+              <li><b>Dress</b>Traditional Indian Attire</li>
+            </ul>
+            <a class="btn btn-line" href="wedding.html">View Details</a>
+          </article>
+
+          <article class="event reveal">
+            <header class="event-head">
+              <span class="event-icon"><svg><use href="#i-reception" /></svg></span>
+              <p class="event-no">Ceremony IV</p>
+              <h3>Grand Reception</h3>
+            </header>
+            <ul>
+              <li><b>Date</b>Friday, December 25, 2026</li>
+              <li><b>Time</b>7:30 PM Onwards</li>
+              <li><b>Venue</b>Lakeside Lawns, The Oberoi Udaivilas</li>
+              <li><b>Dress</b>Black Tie / Indo-Western</li>
+            </ul>
+            <a class="btn btn-line" href="grand-reception.html">View Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================== COUNTDOWN ========================= -->
+    <section class="countdown section-deep" id="countdown" data-label="Save the Date">
+      <div class="deep-art" aria-hidden="true"><svg><use href="#i-mandala" /></svg></div>
+      <div class="container center">
+        <header class="sec-head reveal">
+          <p class="eyebrow">Save the Date</p>
+          <h2>Counting Down to Forever</h2>
+          <p class="sec-sub">Thursday, 24th December 2026 · 6:00 PM IST</p>
+        </header>
+        <div class="timer reveal" id="timer">
+          <div><b data-u="d">00</b><span>Days</span></div>
+          <div><b data-u="h">00</b><span>Hours</span></div>
+          <div><b data-u="m">00</b><span>Minutes</span></div>
+          <div><b data-u="s">00</b><span>Seconds</span></div>
+        </div>
+        <p class="timer-done" id="timerDone" hidden>The celebrations have begun ✦</p>
+        <div class="btn-row reveal">
+          <a class="btn btn-gold" id="gcalBtn" target="_blank" rel="noopener">Add to Google Calendar</a>
+          <button class="btn btn-ghost" id="icsBtn" type="button">Download .ics</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ WATCH =========================== -->
+    <section class="video section-light" id="video" data-label="Watch">
+      <div class="container narrow center">
+        <header class="sec-head reveal">
+          <p class="eyebrow">Watch</p>
+          <h2>A Special Glimpse</h2>
+          <div class="flourish"><svg><use href="#i-flourish" /></svg></div>
+        </header>
+        <!-- Vertical (9:16) invitation film. Swap the file by changing data-src;
+             a YouTube id on data-id works too. Drop both to fall back to the
+             ornamental poster. -->
+        <div class="video-frame portrait reveal" id="videoFrame"
+             data-id="" data-src="assets/video/invitation-film.mp4">
+          <div class="video-poster">
+            <img class="vp-still" src="assets/images/film-poster.jpg" alt="Opening frame of the invitation film" loading="lazy" />
+          </div>
+          <button class="play" type="button" aria-label="Play the invitation film"><svg><use href="#i-play" /></svg></button>
+        </div>
+        <p class="video-note reveal">49 seconds · tap to play with sound</p>
+      </div>
+    </section>
+
+    <!-- =========================== LOCATION ========================= -->
+    <section class="venue section-dark" id="venue" data-label="Location">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow">Location</p>
+          <h2>The Venue</h2>
+          <div class="flourish"><svg><use href="#i-flourish" /></svg></div>
+        </header>
+        <div class="venue-grid">
+          <div class="venue-info reveal">
+            <span class="venue-pin" aria-hidden="true"><svg><use href="#i-pin" /></svg></span>
+            <h3>The Oberoi Udaivilas</h3>
+            <p>Haridasji Ki Magri, Mulla Talai,<br />Udaipur, Rajasthan 313001, India</p>
+            <p class="venue-note">A palace on the banks of Lake Pichola — where every courtyard glows with candlelight and every sunset feels like a blessing.</p>
+            <div class="btn-row left">
+              <a class="btn btn-gold" href="https://maps.google.com/?q=The+Oberoi+Udaivilas+Udaipur" target="_blank" rel="noopener">Get Directions</a>
+            </div>
+          </div>
+          <div class="map reveal">
+            <iframe title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=The%20Oberoi%20Udaivilas%20Udaipur&z=14&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================= LIVE STREAM ======================== -->
+    <section class="live section-deep" id="live" data-label="Live Stream">
+      <div class="deep-art alt" aria-hidden="true"><svg><use href="#i-mandala" /></svg></div>
+      <div class="container narrow center">
+        <div class="live-badge reveal"><i aria-hidden="true"></i> Live Stream</div>
+        <h2 class="reveal">Watch Live</h2>
+        <p class="sec-sub reveal">Can't make it in person? Join us virtually as we celebrate this beautiful moment together.</p>
+        <div class="btn-row reveal">
+          <a class="btn btn-gold" href="https://myshaadhilink.in/livestream/coming-soon" target="_blank" rel="noopener">Join Live Stream</a>
+        </div>
+        <p class="live-note reveal">The live stream will begin 30 minutes before the ceremony.</p>
+      </div>
+    </section>
+
+    <!-- ============================ RSVP ============================ -->
+    <section class="rsvp section-light" id="rsvp" data-label="RSVP">
+      <div class="container narrow">
+        <header class="sec-head reveal">
+          <p class="eyebrow">RSVP</p>
+          <h2>Kindly Respond</h2>
+          <div class="flourish"><svg><use href="#i-flourish" /></svg></div>
+          <p class="sec-sub rsvp-sub">Your presence would mean the world to us. Please let us know if you can join our celebration.</p>
+        </header>
+        <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+          <div class="field"><input id="rName" name="name" required placeholder=" " autocomplete="name" /><label for="rName">Your Name</label></div>
+          <div class="field"><input id="rPhone" name="phone" type="tel" placeholder=" " autocomplete="tel" /><label for="rPhone">Phone (optional)</label></div>
+          <fieldset class="choice">
+            <legend>Will you attend?</legend>
+            <label><input type="radio" name="attend" value="Joyfully Accepts" checked /><span>Joyfully Accept</span></label>
+            <label><input type="radio" name="attend" value="Regretfully Declines" /><span>Regretfully Decline</span></label>
+          </fieldset>
+          <div class="field"><select id="rGuests" name="guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select><label for="rGuests" class="up">Number of Guests</label></div>
+          <div class="field"><textarea id="rMsg" name="message" rows="3" placeholder=" "></textarea><label for="rMsg">Blessings for the couple</label></div>
+          <div class="btn-row">
+            <button class="btn btn-gold" type="submit" data-via="whatsapp">Send RSVP</button>
+            <button class="btn btn-ghost dark" type="submit" data-via="email">Send via Email</button>
+          </div>
+          <p class="form-msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- =========================== FOOTER =========================== -->
+    <footer class="footer section-dark" id="thanks" data-label="Thank You">
+      <div class="container center">
+        <div class="footer-medallion reveal" aria-hidden="true">
+          <svg class="fm-ring"><use href="#i-mandala" /></svg>
+          <span>D<i>&amp;</i>D</span>
+        </div>
+        <p class="footer-names reveal">Darshan <i>&amp;</i> Dharal</p>
+        <p class="footer-line reveal">With love and gratitude, we thank you for being part of our journey.</p>
+        <p class="hashtag reveal">#DarshanWedsDharal</p>
+        <div class="btn-row reveal">
+          <button class="btn btn-ghost" id="shareBtn" type="button">Share Invitation</button>
+        </div>
+        <div class="footer-rule" aria-hidden="true"><svg><use href="#i-flourish" /></svg></div>
+        <p class="copy">With love · Raval &amp; Surelia Families · 2026</p>
+        <p class="made-by">This invitation is made by <a href="https://myshaadhilink.in/" target="_blank" rel="noopener">MyShaadhiLink</a></p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>
