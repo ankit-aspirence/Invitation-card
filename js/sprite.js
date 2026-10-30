@@ -180,6 +180,38 @@
     </g>
   </symbol>
 
+  <!-- travel -->
+  <symbol id="i-plane" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 27l36-12-5 13-9 3-6 8-3-7-13-5Z"/>
+      <path d="M19 31l9-9" opacity=".65"/>
+    </g>
+  </symbol>
+  <symbol id="i-hotel" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 41V11a2 2 0 0 1 2-2h17a2 2 0 0 1 2 2v30"/>
+      <path d="M30 20h7a2 2 0 0 1 2 2v19M5 41h38"/>
+      <path d="M15 16h3M22 16h3M15 23h3M22 23h3M15 30h3M22 30h3" opacity=".75"/>
+      <path d="M34 27h2M34 33h2" opacity=".6"/>
+    </g>
+  </symbol>
+  <symbol id="i-car" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7 32v-6l4-10a3 3 0 0 1 3-2h20a3 3 0 0 1 3 2l4 10v6"/>
+      <path d="M7 26h34"/>
+      <path d="M7 32h7v4H7zM34 32h7v4h-7z"/>
+      <circle cx="15" cy="26" r="1.4" fill="currentColor" stroke="none"/>
+      <circle cx="33" cy="26" r="1.4" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+  <symbol id="i-ring" viewBox="0 0 48 48">
+    <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="24" cy="30" r="11"/>
+      <path d="M18 14h12l-6 5-6-5Z"/>
+      <path d="M18 14l6 5 6-5" opacity=".6"/>
+    </g>
+  </symbol>
+
 </defs></svg>`;
 
   const mount = () => {

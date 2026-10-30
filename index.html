@@ -13,10 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
 </head>
 <body class="locked">
-  <script src="js/sprite.js?v=4"></script>
+  <script src="js/sprite.js?v=5"></script>
+
+  <!-- holds the curtain until the display fonts are ready -->
+  <div id="loader">
+    <div class="loader-mark">
+      <span>D<i>&amp;</i>D</span>
+      <span class="loader-line" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
 
   <!-- ============================================================
        ENVELOPE / INTRO
@@ -149,6 +158,40 @@
       </div>
     </section>
 
+    <!-- =========================== OUR STORY ======================== -->
+    <section class="story section-deep" id="story" data-label="Our Story">
+      <div class="deep-art" aria-hidden="true"><svg><use href="#i-mandala" /></svg></div>
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2>How We Got Here</h2>
+          <div class="flourish"><svg><use href="#i-flourish" /></svg></div>
+        </header>
+        <div class="story-line">
+          <article class="beat reveal">
+            <p class="beat-when">Winter 2019</p>
+            <h3>A Borrowed Dupatta</h3>
+            <p>They met at a friend's sangeet in Ahmedabad, arguing over whose turn it was on the dance floor. Neither remembers who won. Both remember staying until the lights came on.</p>
+          </article>
+          <article class="beat reveal">
+            <p class="beat-when">Monsoon 2022</p>
+            <h3>The First Trip</h3>
+            <p>Three days in Udaipur, one umbrella between them, and a boat ride on Lake Pichola that neither of them has stopped talking about since.</p>
+          </article>
+          <article class="beat reveal">
+            <p class="beat-when">Diwali 2024</p>
+            <h3>The Question</h3>
+            <p>On the terrace, after the last diya was lit and both families had finally gone quiet. She said yes before he finished asking.</p>
+          </article>
+          <article class="beat reveal">
+            <p class="beat-when">December 2026</p>
+            <h3>Where It Began</h3>
+            <p>Back to the lake that started it — this time with everyone they love on the shore.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ========================= CELEBRATIONS ======================= -->
     <section class="events section-light" id="events" data-label="Celebrations">
       <div class="container">
@@ -170,7 +213,7 @@
               <li><b>Date</b>Tuesday, December 22, 2026</li>
               <li><b>Time</b>10:00 AM</li>
               <li><b>Venue</b>Poolside Terrace, The Oberoi Udaivilas</li>
-              <li><b>Dress</b>Shades of Yellow</li>
+              <li data-colors="#F2C230,#E8A93C,#FFDC73"><b>Dress</b>Shades of Yellow</li>
             </ul>
             <a class="btn btn-line" href="haldi.html">View Details</a>
           </article>
@@ -185,7 +228,7 @@
               <li><b>Date</b>Wednesday, December 23, 2026</li>
               <li><b>Time</b>4:00 PM Onwards</li>
               <li><b>Venue</b>Courtyard Garden, The Oberoi Udaivilas</li>
-              <li><b>Dress</b>Festive Greens &amp; Pinks</li>
+              <li data-colors="#2F6B4F,#6FA287,#E86A92,#F2A6BE"><b>Dress</b>Festive Greens &amp; Pinks</li>
             </ul>
             <a class="btn btn-line" href="mehendi.html">View Details</a>
           </article>
@@ -201,7 +244,7 @@
               <li><b>Date</b>Thursday, December 24, 2026</li>
               <li><b>Time</b>6:00 PM</li>
               <li><b>Venue</b>The Grand Mandap, The Oberoi Udaivilas</li>
-              <li><b>Dress</b>Traditional Indian Attire</li>
+              <li data-colors="#7C1F33,#C9A24A,#E8D5A3"><b>Dress</b>Traditional Indian Attire</li>
             </ul>
             <a class="btn btn-line" href="wedding.html">View Details</a>
           </article>
@@ -216,7 +259,7 @@
               <li><b>Date</b>Friday, December 25, 2026</li>
               <li><b>Time</b>7:30 PM Onwards</li>
               <li><b>Venue</b>Lakeside Lawns, The Oberoi Udaivilas</li>
-              <li><b>Dress</b>Black Tie / Indo-Western</li>
+              <li data-colors="#1B1B1F,#3A3A42,#C9A24A"><b>Dress</b>Black Tie / Indo-Western</li>
             </ul>
             <a class="btn btn-line" href="grand-reception.html">View Details</a>
           </article>
@@ -294,6 +337,68 @@
       </div>
     </section>
 
+    <!-- ========================= TRAVEL & STAY ====================== -->
+    <section class="travel section-light" id="travel" data-label="Travel &amp; Stay">
+      <div class="container">
+        <header class="sec-head reveal">
+          <p class="eyebrow">Travel &amp; Stay</p>
+          <h2>Getting to Udaipur</h2>
+          <div class="flourish"><svg><use href="#i-flourish" /></svg></div>
+          <p class="sec-sub events-sub">Most guests are flying in. Here is everything you need to plan the trip.</p>
+        </header>
+
+        <div class="travel-grid">
+          <article class="trip reveal">
+            <span class="trip-icon" aria-hidden="true"><svg><use href="#i-plane" /></svg></span>
+            <h3>By Air</h3>
+            <p class="trip-meta">Maharana Pratap Airport · UDR</p>
+            <ul>
+              <li><b>Distance</b>22 km from the venue · about 40 minutes</li>
+              <li><b>Direct flights</b>Delhi, Mumbai, Ahmedabad, Bengaluru, Jaipur</li>
+              <li><b>Best arrival</b>21 or 22 December, before evening</li>
+            </ul>
+            <a class="btn btn-line" href="https://maps.google.com/?q=Maharana+Pratap+Airport+Udaipur" target="_blank" rel="noopener">View on Map</a>
+          </article>
+
+          <article class="trip reveal">
+            <span class="trip-icon" aria-hidden="true"><svg><use href="#i-car" /></svg></span>
+            <h3>By Road &amp; Rail</h3>
+            <p class="trip-meta">Udaipur City Station</p>
+            <ul>
+              <li><b>From the station</b>8 km · about 20 minutes</li>
+              <li><b>By car</b>Ahmedabad 4.5 hrs · Jaipur 6 hrs · Jodhpur 4 hrs</li>
+              <li><b>Getting around</b>Cabs are easy to find; the venue can arrange one</li>
+            </ul>
+            <a class="btn btn-line" href="https://maps.google.com/?q=Udaipur+City+Railway+Station" target="_blank" rel="noopener">View on Map</a>
+          </article>
+
+          <article class="trip reveal">
+            <span class="trip-icon" aria-hidden="true"><svg><use href="#i-hotel" /></svg></span>
+            <h3>Where to Stay</h3>
+            <p class="trip-meta">Rooms held until 1 December</p>
+            <ul>
+              <li><b>At the venue</b>The Oberoi Udaivilas — ask for the Raval–Surelia block</li>
+              <li><b>Nearby</b>Trident Udaipur · 2 km · same lakefront</li>
+              <li><b>Heritage</b>Taj Lake Palace · 3 km · reached by boat</li>
+            </ul>
+            <a class="btn btn-line" href="https://maps.google.com/?q=hotels+near+The+Oberoi+Udaivilas+Udaipur" target="_blank" rel="noopener">See Hotels</a>
+          </article>
+
+          <article class="trip reveal">
+            <span class="trip-icon" aria-hidden="true"><svg><use href="#i-pin" /></svg></span>
+            <h3>Good to Know</h3>
+            <p class="trip-meta">December in Udaipur</p>
+            <ul>
+              <li><b>Weather</b>22–26°C by day, 8–11°C at night — carry a shawl</li>
+              <li><b>Shuttle</b>Airport pickups on request, 21–23 December</li>
+              <li><b>Any help</b>Message us and we will sort it out</li>
+            </ul>
+            <a class="btn btn-line" href="#rsvp">Tell Us Your Plans</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ========================= LIVE STREAM ======================== -->
     <section class="live section-deep" id="live" data-label="Live Stream">
       <div class="deep-art alt" aria-hidden="true"><svg><use href="#i-mandala" /></svg></div>
@@ -356,6 +461,7 @@
     </footer>
   </main>
 
-  <script src="js/main.js?v=4"></script>
+  <script src="js/ui.js?v=5"></script>
+  <script src="js/main.js?v=5"></script>
 </body>
 </html>

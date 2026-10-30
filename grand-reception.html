@@ -10,11 +10,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Pinyon+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=4" />
-  <link rel="stylesheet" href="css/ceremony.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/ceremony.css?v=5" />
 </head>
-<body class="ceremony-page">
-  <script src="js/sprite.js?v=4"></script>
+<body class="ceremony-page"
+      data-event="Grand Reception"
+      data-start="2026-12-25T19:30:00+05:30"
+      data-hours="4"
+      data-venue="Lakeside Lawns, The Oberoi Udaivilas, Udaipur">
+  <script src="js/sprite.js?v=5"></script>
+
+  <div id="loader">
+    <div class="loader-mark">
+      <span>D<i>&amp;</i>D</span>
+      <span class="loader-line" aria-hidden="true"></span>
+    </div>
+  </div>
+  <div id="progress" aria-hidden="true"></div>
   <canvas id="petals" aria-hidden="true"></canvas>
 
   <header class="topbar">
@@ -53,7 +65,7 @@
             <span class="detail-icon" aria-hidden="true"><svg><use href="#i-pin" /></svg></span>
             <b>Venue</b><p>Lakeside Lawns,<br />The Oberoi Udaivilas</p>
           </div>
-          <div class="detail reveal">
+          <div class="detail reveal" data-colors="#1B1B1F,#3A3A42,#C9A24A">
             <span class="detail-icon" aria-hidden="true"><svg><use href="#i-dress" /></svg></span>
             <b>Dress Code</b><p>Black Tie / Indo-Western</p>
           </div>
@@ -67,6 +79,8 @@
           <p class="pull reveal">Four days of ceremony end here, under the open sky. Stay as long as you like.</p>
           <div class="btn-row reveal">
             <a class="btn btn-gold" href="https://maps.google.com/?q=The+Oberoi+Udaivilas+Udaipur" target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn-ghost dark" id="cerGcal" target="_blank" rel="noopener">Add to Calendar</a>
+            <button class="btn btn-ghost dark" id="cerIcs" type="button">Download .ics</button>
             <a class="btn btn-ghost dark" href="index.html#rsvp">Send Your RSVP</a>
           </div>
         </div>
@@ -107,6 +121,7 @@
     </footer>
   </main>
 
-  <script src="js/ceremony.js?v=4"></script>
+  <script src="js/ui.js?v=5"></script>
+  <script src="js/ceremony.js?v=5"></script>
 </body>
 </html>

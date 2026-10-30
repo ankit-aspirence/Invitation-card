@@ -35,6 +35,50 @@
     io.observe(el);
   });
 
+  /* ---------- Add this ceremony to a calendar ----------
+     The page describes its own event on <body>, so each ceremony gets a
+     real calendar entry rather than only the wedding having one. */
+  const ds = document.body.dataset;
+  if (ds.start && ds.event) {
+    const start = new Date(ds.start);
+    const end = new Date(start.getTime() + (Number(ds.hours) || 3) * 36e5);
+    const stamp = (d) => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+    const title = `${ds.event} — Darshan & Dharal`;
+    const where = ds.venue || "";
+    const notes = "With the divine blessings of our beloved elders, we invite you to share our joy.";
+
+    const gcal = $("#cerGcal");
+    if (gcal) {
+      gcal.href =
+        "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+        `&text=${encodeURIComponent(title)}` +
+        `&dates=${stamp(start)}/${stamp(end)}` +
+        `&details=${encodeURIComponent(notes)}` +
+        `&location=${encodeURIComponent(where)}`;
+    }
+
+    const ics = $("#cerIcs");
+    if (ics) {
+      ics.addEventListener("click", () => {
+        const body = [
+          "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//SignatureOfLove//EN", "BEGIN:VEVENT",
+          `UID:${Date.now()}@signature-of-love`, `DTSTAMP:${stamp(new Date())}`,
+          `DTSTART:${stamp(start)}`, `DTEND:${stamp(end)}`,
+          `SUMMARY:${title}`, `DESCRIPTION:${notes}`,
+          `LOCATION:${where.replace(/,/g, "\\,")}`,
+          "END:VEVENT", "END:VCALENDAR",
+        ].join("\r\n");
+        const url = URL.createObjectURL(new Blob([body], { type: "text/calendar" }));
+        const a = Object.assign(document.createElement("a"), {
+          href: url,
+          download: `${ds.event.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.ics`,
+        });
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(() => URL.revokeObjectURL(url), 1000);
+      });
+    }
+  }
+
   /* ---------- Falling petals ---------- */
   const cv = $("#petals");
   if (cv && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
